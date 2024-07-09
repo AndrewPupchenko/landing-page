@@ -1,10 +1,12 @@
+@import "~@styles/variables";
+
 .project{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 50px 100px 50px 100px;
-    border-top: 1px solid rgb(201, 201, 201);
+    border-top: 1px solid $gray-light;
     cursor: pointer;
     transition: all 0.2s;
 
@@ -21,7 +23,7 @@
     }
 
     &:last-of-type{
-        border-bottom: 1px solid rgb(201, 201, 201);
+        border-bottom: 1px solid $gray-light;
     }
 
     &:hover{
