@@ -8,7 +8,7 @@
   justify-content: center;
   .body {
     max-width: 1400px;
-    display: flex;
+    display: grid;
     gap: 50px;
     position: relative;
     p {
@@ -34,7 +34,7 @@
     }
     .button {
       top: 80%;
-      left: calc(100% - 200px);
+      left: calc(100% - 100px);
       width: 180px;
       height: 180px;
       background-color: $background-dark;
