@@ -17,15 +17,15 @@ const slider1 = [
     src: "ONIIP.png",
   },
   {
-    color: "#e1dad6",
-    src: "wix.jpg",
+    color: "#e5e0e1",
+    src: "portfolio.png",
   },
 ]
 
 const slider2 = [
   {
-    color: "#d7d4cf",
-    src: "wix.jpg",
+    color: "#e5e0e1",
+    src: "portfolio.png",
   },
 
   {
@@ -37,8 +37,8 @@ const slider2 = [
     src: "sustain.png",
   },
   {
-    color: "#e5e0e1",
-    src: "portfolio.png",
+    color: "#e3e5e7",
+    src: "kreios.png",
   },
 ]
 
