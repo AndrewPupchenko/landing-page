@@ -5,15 +5,18 @@
   flex-direction: column;
   gap: 3vw;
   position: relative;
-  margin-top: 200px;
+  padding-top: 200px;
   background-color: $text-color;
   z-index: 1;
+  overflow: hidden;
+
   .slider {
     display: flex;
     position: relative;
     gap: 3vw;
     width: 120vw;
     left: -10vw;
+
     .project {
       width: 25%;
       height: 20vw;
@@ -34,10 +37,12 @@
     background-color: $accent-color;
     position: relative;
     margin-top: 100px;
+
     .circle {
+      overflow: hidden;
       height: 1550%;
-      width: 120%;
-      left: -10%;
+      width: 100%;
+      left: 0%;
       border-radius: 0 0 50% 50%;
       background-color: $text-color;
       z-index: 1;

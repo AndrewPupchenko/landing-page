@@ -26,9 +26,8 @@ export default function Index() {
             <div className={styles.imageContainer}>
               <Image fill={true} alt={"image"} src={`/images/avatar.ico`} />
             </div>
-            <h2>Let's work</h2>
+            <h2>Let's work together</h2>
           </span>
-          <h2>together</h2>
           <motion.div style={{ x }} className={styles.buttonContainer}>
             <CustomLink href={contact_data.telegramRef}>
               <Rounded backgroundColor={"#334BD3"} className={styles.button}>

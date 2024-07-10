@@ -3,9 +3,9 @@
 .project{
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 50px 100px 50px 100px;
+    padding-block: 3rem;
     border-top: 1px solid $gray-light;
     cursor: pointer;
     transition: all 0.2s;

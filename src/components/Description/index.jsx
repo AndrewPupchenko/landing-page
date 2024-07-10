@@ -36,7 +36,11 @@ export default function Index() {
             ))}
           </motion.ul>
         </div>
-        <div data-scroll data-scroll-speed={0.1}>
+        <div
+          data-scroll
+          data-scroll-speed={0.1}
+          className={styles.scrollItem}
+        >
           <CustomLink href={"https://linkedin.com/in/andrew-react"}>
             <Rounded className={styles.button}>
               <p>About me</p>
