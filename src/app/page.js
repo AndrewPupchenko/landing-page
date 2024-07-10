@@ -13,20 +13,33 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    ;(async () => {
+    const initScroll = async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default
-      const locomotiveScroll = new LocomotiveScroll()
+      const locoScroll = new LocomotiveScroll({
+        el: document.querySelector(".smooth-scroll"),
+        smooth: true,
+        smartphone: {
+          smooth: true,
+        },
+        tablet: {
+          smooth: true,
+        },
+      })
 
       setTimeout(() => {
         setIsLoading(false)
         document.body.style.cursor = "default"
         window.scrollTo(0, 0)
       }, 2000)
-    })()
+    }
+
+    if (typeof window !== "undefined") {
+      initScroll()
+    }
   }, [])
 
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} smooth-scroll`}>
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
