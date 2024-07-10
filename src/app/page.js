@@ -15,14 +15,21 @@ export default function Home() {
   useEffect(() => {
     const initScroll = async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default
+
       const locoScroll = new LocomotiveScroll({
         el: document.querySelector(".smooth-scroll"),
         smooth: true,
         smartphone: {
           smooth: true,
+          direction: "vertical",
+          gestureDirection: "vertical",
+          breakpoint: 0,
         },
         tablet: {
           smooth: true,
+          direction: "vertical",
+          gestureDirection: "vertical",
+          breakpoint: 0,
         },
       })
 
@@ -31,6 +38,10 @@ export default function Home() {
         document.body.style.cursor = "default"
         window.scrollTo(0, 0)
       }, 2000)
+
+      return () => {
+        if (locoScroll) locoScroll.destroy()
+      }
     }
 
     if (typeof window !== "undefined") {

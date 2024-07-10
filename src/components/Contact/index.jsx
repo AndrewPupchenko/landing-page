@@ -7,6 +7,7 @@ import { useRef } from "react"
 import Magnetic from "../../common/Magnetic"
 import Rounded from "../../common/RoundedButton"
 import styles from "./style.module.scss"
+import avatar from "@/images/avatar.ico"
 
 export default function Index() {
   const container = useRef(null)
@@ -24,7 +25,7 @@ export default function Index() {
         <div className={styles.title}>
           <span>
             <div className={styles.imageContainer}>
-              <Image fill={true} alt={"image"} src={`/images/avatar.ico`} />
+              <Image fill={true} alt={"image"} src={avatar} />
             </div>
             <h2>Let&apos;s work together</h2>
           </span>

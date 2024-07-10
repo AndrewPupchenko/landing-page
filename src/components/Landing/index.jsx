@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/all"
 import { slideUp } from "./animation"
 import { motion } from "framer-motion"
 import ArrowSvg from "@/components/svg/Arrow"
+import background from "@/images/background.png"
 
 export default function Home() {
   const firstText = useRef(null)
@@ -49,7 +50,7 @@ export default function Home() {
       animate="enter"
       className={styles.landing}
     >
-      <Image src="/images/background.png" fill={true} alt="background" />
+      <Image src={background} fill={true} alt="background" />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>Frontend Developer - </p>

@@ -1,4 +1,9 @@
 "use client"
+import { contact_data } from "@/api/mock-data"
+import { CustomLink } from "@/common/Link/CustomLink"
+import beetsoft from "@/images/beetsoft.png"
+import ONIIP from "@/images/ONIIP.png"
+import vivid from "@/images/vivid.png"
 import { motion } from "framer-motion"
 import gsap from "gsap"
 import Image from "next/image"
@@ -6,26 +11,24 @@ import { useEffect, useRef, useState } from "react"
 import Rounded from "../../common/RoundedButton"
 import Project from "./components/project"
 import styles from "./style.module.scss"
-import { CustomLink } from "@/common/Link/CustomLink"
-import { contact_data } from "@/api/mock-data"
 
 const projects = [
   {
     title: "Kreios",
-    src: "vivid.png",
+    src: vivid,
     color: "#d4e3ec",
     role: "Fullstack Developer",
   },
   {
     title: "Beetsoft",
-    src: "beetsoft.png",
+    src: beetsoft,
     color: "#d6d7dc",
     role: "Fullstack Developer",
   },
   {
     title: "ONIIP",
     color: "#e3e3e3",
-    src: "ONIIP.png",
+    src: ONIIP,
     role: "Fullstack Developer",
   },
 ]
@@ -141,12 +144,7 @@ export default function Home() {
                 style={{ backgroundColor: color }}
                 key={`modal_${index}`}
               >
-                <Image
-                  src={`/images/${src}`}
-                  width={300}
-                  height={0}
-                  alt="image"
-                />
+                <Image src={src} width={300} height={0} alt="image" />
               </div>
             ))}
           </div>

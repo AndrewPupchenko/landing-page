@@ -1,44 +1,50 @@
-import { useRef } from "react"
-import { useScroll, useTransform, motion } from "framer-motion"
-import styles from "./style.module.scss"
+import beetsoft from "@/images/beetsoft.png"
+import kreios from "@/images/kreios.png"
+import ONIIP from "@/images/ONIIP.png"
+import portfolio from "@/images/portfolio.png"
+import sustain from "@/images/sustain.png"
+import vivid from "@/images/vivid.png"
+import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
+import { useRef } from "react"
+import styles from "./style.module.scss"
 
 const slider1 = [
   {
     color: "#e3e5e7",
-    src: "kreios.png",
+    src: kreios,
   },
   {
     color: "#d6d7dc",
-    src: "beetsoft.png",
+    src: beetsoft,
   },
   {
     color: "#e3e3e3",
-    src: "ONIIP.png",
+    src: ONIIP,
   },
   {
     color: "#e5e0e1",
-    src: "portfolio.png",
+    src: portfolio,
   },
 ]
 
 const slider2 = [
   {
     color: "#e5e0e1",
-    src: "portfolio.png",
+    src: portfolio,
   },
 
   {
     color: "#d4e3ec",
-    src: "vivid.png",
+    src: vivid,
   },
   {
     color: "#21242b",
-    src: "sustain.png",
+    src: sustain,
   },
   {
     color: "#e3e5e7",
-    src: "kreios.png",
+    src: kreios,
   },
 ]
 
@@ -64,11 +70,7 @@ export default function Index() {
               style={{ backgroundColor: project.color }}
             >
               <div className={styles.imageContainer}>
-                <Image
-                  fill={true}
-                  alt={"image"}
-                  src={`/images/${project.src}`}
-                />
+                <Image fill={true} alt={"image"} src={project.src} />
               </div>
             </div>
           )
@@ -83,11 +85,7 @@ export default function Index() {
               style={{ backgroundColor: project.color }}
             >
               <div key={index} className={styles.imageContainer}>
-                <Image
-                  fill={true}
-                  alt={"image"}
-                  src={`/images/${project.src}`}
-                />
+                <Image fill={true} alt={"image"} src={project.src} />
               </div>
             </div>
           )
