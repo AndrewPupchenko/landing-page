@@ -17,20 +17,10 @@ export default function Home() {
       const LocomotiveScroll = (await import("locomotive-scroll")).default
 
       const locoScroll = new LocomotiveScroll({
-        el: document.querySelector(".smooth-scroll"),
+        el: document.querySelector("[data-scroll-container]"),
         smooth: true,
-        smartphone: {
-          smooth: true,
-          direction: "vertical",
-          gestureDirection: "vertical",
-          breakpoint: 0,
-        },
-        tablet: {
-          smooth: true,
-          direction: "vertical",
-          gestureDirection: "vertical",
-          breakpoint: 0,
-        },
+        smartphone: { smooth: true },
+        tablet: { smooth: true },
       })
 
       setTimeout(() => {

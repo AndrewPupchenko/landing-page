@@ -1,13 +1,13 @@
 "use client"
-import Image from "next/image"
-import styles from "./style.module.scss"
-import { useRef, useLayoutEffect } from "react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/all"
-import { slideUp } from "./animation"
-import { motion } from "framer-motion"
 import ArrowSvg from "@/components/svg/Arrow"
 import background from "@/images/background.png"
+import { motion } from "framer-motion"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/all"
+import Image from "next/image"
+import { useLayoutEffect, useRef } from "react"
+import { slideUp } from "./animation"
+import styles from "./style.module.scss"
 
 export default function Home() {
   const firstText = useRef(null)
@@ -18,17 +18,24 @@ export default function Home() {
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
-    gsap.to(slider.current, {
+
+    const trigger = gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
         scrub: 0.25,
         start: 0,
         end: window.innerHeight,
         onUpdate: (e) => (direction = e.direction * -1),
+        invalidateOnRefresh: true,
       },
       x: "-500px",
     })
+
     requestAnimationFrame(animate)
+
+    return () => {
+      trigger.scrollTrigger.kill()
+    }
   }, [])
 
   const animate = () => {
