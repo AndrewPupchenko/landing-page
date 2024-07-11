@@ -1,8 +1,7 @@
 .smooth-scroll {
-  overflow: hidden; // Убедитесь, что overflow скрыт
-  position: relative; // Убедитесь, что позиционирование задано
+  overflow: hidden;
+  position: relative;
 
-  // Убедитесь, что все дочерние элементы имеют необходимые стили для правильного скролла
   > * {
     position: relative;
   }

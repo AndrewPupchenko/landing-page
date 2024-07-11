@@ -7,8 +7,12 @@
   overflow: hidden;
 
   img {
-    object-fit: contain;
+    object-fit: scale-down;
     background-color: $background-gary;
+
+    @media (max-width: $tablet-size) {
+      object-fit: cover;
+    }
   }
 
   .sliderContainer {
@@ -38,11 +42,12 @@
 
   .description {
     position: absolute;
-    top: 35%;
-    left: 65%;
+    top: 20%;
+    left: 5%;
     color: $text-color;
     font-size: 24px;
     font-weight: 300;
+    width: 15rem;
 
     p {
       margin: 0px;
@@ -51,7 +56,7 @@
 
     svg {
       transform: scale(2);
-      margin-bottom: 100px;
+      margin-bottom: 20px;
     }
   }
 }
