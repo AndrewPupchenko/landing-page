@@ -86,7 +86,7 @@ export default function Index() {
       <div ref={button} className={styles.headerButtonContainer}>
         <Rounded
           onClick={() => setIsActive((v) => !v)}
-          className={`${styles.button}`}
+          className={styles.button}
         >
           <div
             className={`${styles.burger} ${

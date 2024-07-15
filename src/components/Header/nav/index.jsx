@@ -37,6 +37,10 @@ export default function Index() {
       animate="enter"
       exit="exit"
       className={styles.menu}
+      onClick={(e) => {
+        e.preventDefault()
+        e.stopPropagation()
+      }}
     >
       <div className={styles.body}>
         <div
