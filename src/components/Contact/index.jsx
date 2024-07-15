@@ -25,7 +25,7 @@ export default function Index() {
         <div className={styles.title}>
           <span>
             <div className={styles.imageContainer}>
-              <Image fill={true} alt={"image"} src={avatar} />
+              <Image fill alt={"image"} src={avatar} sizes="100%" />
             </div>
             <h2>Let&apos;s work together</h2>
           </span>

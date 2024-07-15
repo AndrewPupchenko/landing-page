@@ -70,7 +70,7 @@ export default function Index() {
               style={{ backgroundColor: project.color }}
             >
               <div className={styles.imageContainer}>
-                <Image fill={true} alt={"image"} src={project.src} />
+                <Image fill alt={"image"} src={project.src} sizes="100%" />
               </div>
             </div>
           )
@@ -85,7 +85,12 @@ export default function Index() {
               style={{ backgroundColor: project.color }}
             >
               <div key={index} className={styles.imageContainer}>
-                <Image fill={true} alt={"image"} src={project.src} />
+                <Image
+                  fill={true}
+                  alt={"image"}
+                  src={project.src}
+                  sizes="100%"
+                />
               </div>
             </div>
           )
